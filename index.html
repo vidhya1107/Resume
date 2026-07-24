@@ -463,6 +463,112 @@
     margin-top: 2px;
   }
 
+  /* ── APPRECIATION ───────────────────────────────── */
+  .appreciation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .appreciation-card {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    padding: 36px 32px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .appreciation-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+  }
+
+  .appreciation-card.featured {
+    grid-column: 1 / -1;
+    background: var(--ink);
+    border-color: var(--ink);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .appreciation-card .badge {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .appreciation-card.featured .badge {
+    color: #c8a882;
+  }
+
+  .appreciation-card h4 {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .appreciation-card.featured h4 {
+    color: var(--paper);
+    font-size: 1.6rem;
+  }
+
+  .appreciation-card p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+
+  .appreciation-card.featured p {
+    color: #a09890;
+  }
+
+  .cert-seal {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #3a3530;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .cert-seal .seal-title {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #c8a882;
+    margin-bottom: 6px;
+  }
+
+  .cert-seal .seal-award {
+    font-family: var(--serif);
+    font-size: 0.85rem;
+    line-height: 1.2;
+    color: var(--paper);
+    font-style: italic;
+  }
+
+  .cert-seal .seal-quarter {
+    font-size: 9px;
+    color: #6b635c;
+    margin-top: 6px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (max-width: 768px) {
+    .appreciation-grid { grid-template-columns: 1fr; }
+    .appreciation-card.featured { grid-template-columns: 1fr; }
+    .cert-seal { display: none; }
+  }
+
   /* ── FOOTER ─────────────────────────────────────── */
   footer {
     background: var(--ink);
@@ -580,6 +686,7 @@
   <a href="#projects">Projects</a>
   <a href="#certifications">Certifications</a>
   <a href="#achievements">Achievements</a>
+  <a href="#appreciation">Appreciation</a>
 </nav>
 
 <!-- ── EXPERIENCE ────────────────────────────────────── -->
@@ -810,6 +917,58 @@
       <span class="ach-icon">🎓</span>
       <span>Bachelor of Engineering in <strong>Electronics &amp; Instrumentation</strong> — strong foundation in analytical and systems thinking.</span>
     </div>
+  </div>
+</section>
+
+<!-- ── APPRECIATION ──────────────────────────────────── -->
+<div class="full-rule"></div>
+<section id="appreciation">
+  <div class="section-label">Client recognition</div>
+  <h2>Appreciated by those<br><em style="font-family:'DM Serif Display',serif; font-style:italic; font-weight:400">we deliver for.</em></h2>
+
+  <div class="appreciation-grid">
+
+    <!-- Featured: Mastek certificate -->
+    <div class="appreciation-card featured reveal">
+      <div>
+        <span class="badge">Mastek · Q1 2026–27</span>
+        <h4>Ultimate Team Player</h4>
+        <p>
+          Awarded the <strong style="color:#c8a882">Certificate of Appreciation</strong> by Mastek for outstanding performance in Q1 2026–27, signed by Sourabh Mukherjee, President Americas. Recognised under Mastek's #LeadwithVECTOR values — Velocity, Empowerment, Collaboration, Trust, Ownership, and Respect.
+        </p>
+      </div>
+      <div class="cert-seal">
+        <span class="seal-title">Mastek</span>
+        <span class="seal-award">Ultimate Team Player</span>
+        <span class="seal-quarter">Q1 · 2026–27</span>
+      </div>
+    </div>
+
+    <!-- Supporting recognition items -->
+    <div class="appreciation-card reveal">
+      <span class="badge">Tata Consultancy Services</span>
+      <h4>TCS Innovator Award</h4>
+      <p>Recognised for building the Privacy Report Tool — adopted across the entire banking project and subsequently awarded a US Patent (#9652630).</p>
+    </div>
+
+    <div class="appreciation-card reveal">
+      <span class="badge">Client stakeholders · EHS Project</span>
+      <h4>Defect resolution commendation</h4>
+      <p>Commended by client stakeholders for exceptional defect analysis and resolution on the Environment Health &amp; Safety platform under tight timelines.</p>
+    </div>
+
+    <div class="appreciation-card reveal">
+      <span class="badge">TCS · Banking programme</span>
+      <h4>View remediation — zero defects</h4>
+      <p>Widely appreciated by the client for successfully installing 1,500+ views in a single deployment without a single flaw, including views belonging to other teams.</p>
+    </div>
+
+    <div class="appreciation-card reveal">
+      <span class="badge">TCS · Knowledge management</span>
+      <h4>Knowmax Hall of Fame nomination</h4>
+      <p>Nominated for the TCS Knowmax Hall of Fame for significant knowledge contributions shared with the wider organisation.</p>
+    </div>
+
   </div>
 </section>
 
